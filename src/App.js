@@ -2,21 +2,33 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import fetchData from './utils/api';
+import DataTable from './components/DataTable';
 
 const url = 'https://api.spacexdata.com/v4/launches';
 
 function App() {
 
   const [data, setData] = useState({});
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetchData(url)
-      .then(res => setData(res));
+      .then(res => {
+        setData(res);
+        setLoading(false);
+      });
   },[]);
 
   return (
     <div className="App">
-      {data.toString()}
+      {loading ?
+        <p>
+          loading
+        </p>
+        :
+        <DataTable 
+          data = {data}
+        />
+      }
     </div>
   );
 }
