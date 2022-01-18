@@ -52,6 +52,14 @@ td {
   width: 10%;
 }
 
+th {
+  white-space: no-wrap;
+}
+
+th svg {
+  margin-left: 10px;
+}
+
 .tableDetails {
   text-align: left;
   padding-left: 1em;
