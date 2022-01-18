@@ -4,7 +4,7 @@ const DataTable = ({ data }) => {
     const [ sortInfo, setSortInfo ] = useState(null);
     
     let sortedData = [...data];
-    
+
     if (sortInfo !== null) {
         sortedData.sort((a, b) => {
             if (a[sortInfo.field] < b[sortInfo.field]) {
@@ -30,10 +30,10 @@ const DataTable = ({ data }) => {
                         return (
                             <tr key={item.id}>
                                 <td>{item.name}</td>
-                                <td>{item.date_local}</td>
+                                <td>{new Date(item.date_local).toDateString()}</td>
                                 <td>{item.flight_number}</td>
                                 <td>{item.success ? '^' : 'x'}</td>
-                                <td>{item.details}</td>
+                                <td className='tableDetails'>{item.details}</td>
                             </tr>
                         )
                     });

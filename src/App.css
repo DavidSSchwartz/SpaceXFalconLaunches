@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+table, tr, th, td {
+  border: 1px solid black;
+  padding: .5em;
+
+}
+
+table {
+  border-collapse: collapse;
+  margin: 100px;
+}
+
+td {
+  width: 10%;
+}
+
+.tableDetails {
+  text-align: left;
+  padding-left: 1em;
+  width: 60%;
+}
