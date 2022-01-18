@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSort } from '@fortawesome/free-solid-svg-icons'
 import { faSortUp } from '@fortawesome/free-solid-svg-icons'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const DataTable = ({ data }) => {
     const [ sortInfo, setSortInfo ] = useState(null);
@@ -53,7 +55,17 @@ const DataTable = ({ data }) => {
                                     {item.flight_number}
                                 </td>
                                 <td>
-                                    {item.success ? '^' : 'x'}
+                                    {item.success ? 
+                                        <FontAwesomeIcon 
+                                            icon={faCheck} 
+                                            style={{color: 'green'}}
+                                        />
+                                        : 
+                                        <FontAwesomeIcon 
+                                            icon={faTimes} 
+                                            style={{color: 'red'}}
+                                        />    
+                                    }
                                 </td>
                                 <td className='tableDetails'>
                                     {item.details}
