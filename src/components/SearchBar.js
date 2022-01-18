@@ -1,20 +1,37 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
+import DataTable from './DataTable';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
-const SearchBar = () => {
+const SearchBar = ({ data }) => {
+    
+    const [ searchTerm, setSearchTerm ] = useState('');
 
+    const filteredData = data.filter(
+        item => {
+            return (
+                item.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+    );
     const handleChange = (ev) => {
-       ev.target.value
+       setSearchTerm(ev.target.value);
     }
 
     return (
-        <div className='search-bar-container'>
-            <FontAwesomeIcon icon={faSearch} />
-            <input 
-                type='text'
-                placeholder='Search by name...'
-                onChange = {handleChange}
+        <div>
+            <div className='search-bar-container'>
+                <FontAwesomeIcon icon={faSearch} />
+                <input 
+                    type='text'
+                    placeholder='Search by name...'
+                    onChange = {handleChange}
+                />
+            </div>
+            
+            <DataTable 
+                data = {filteredData}
             />
         </div>
     )

@@ -28,11 +28,7 @@ function App() {
         :
         <>
           <SearchBar
-            
-          />
-
-          <DataTable 
-            data = {data}
+            data = { data }
           />
         </>
       }
