@@ -21,16 +21,20 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar />
-
       {loading ?
         <p>
           loading
         </p>
         :
-        <DataTable 
-          data = {data}
-        />
+        <>
+          <SearchBar
+            
+          />
+
+          <DataTable 
+            data = {data}
+          />
+        </>
       }
     </div>
   );

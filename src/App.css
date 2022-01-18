@@ -50,6 +50,12 @@ table {
 
 td {
   width: 10%;
+  font-size: 1.2rem;
+}
+
+td img {
+  width: 100px;
+  height: 100px;
 }
 
 th {

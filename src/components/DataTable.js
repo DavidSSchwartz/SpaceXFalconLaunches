@@ -46,6 +46,9 @@ const DataTable = ({ data }) => {
                         return (
                             <tr key={item.id}>
                                 <td>
+                                    <img src={item.links.patch.small} />
+                                </td>
+                                <td>
                                     {item.name}
                                 </td>
                                 <td>
@@ -78,6 +81,7 @@ const DataTable = ({ data }) => {
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th onClick={() => setUpSort('name')}>
                         Name
                         {/* {
