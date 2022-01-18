@@ -29,10 +29,13 @@ const SearchBar = ({ data }) => {
                     onChange = {handleChange}
                 />
             </div>
-            
-            <DataTable 
-                data = {filteredData}
-            />
+            {filteredData.length === 0 ?
+                <h2>No search results</h2>
+            :
+                <DataTable 
+                    data = {filteredData}
+                />
+            }
         </div>
     )
 }

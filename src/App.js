@@ -22,15 +22,11 @@ function App() {
   return (
     <div className="App">
       {loading ?
-        <p>
-          loading
-        </p>
+        <div className='spinner'></div>
         :
-        <>
-          <SearchBar
-            data = { data }
-          />
-        </>
+        <SearchBar
+          data = { data }
+        />
       }
     </div>
   );

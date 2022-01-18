@@ -84,16 +84,7 @@ const DataTable = ({ data }) => {
                     <th></th>
                     <th onClick={() => setUpSort('name')}>
                         Name
-                        {/* {
-                            sortInfo?.field === 'name' 
-                            &&
-                            (sortInfo?.direction === 'asc' && <FontAwesomeIcon icon={faSortUp} />)
-                            ||
-                            (sortInfo?.direction === 'desc' && <FontAwesomeIcon icon={faSortDown} />)
-                            ||
-                            <FontAwesomeIcon icon={faSort} />
-                        } */}
-                           {sortIcon('name')}
+                        {sortIcon('name')}
                     </th>
                     <th onClick={() => setUpSort('date_local')}>
                         Date

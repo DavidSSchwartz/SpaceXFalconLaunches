@@ -97,3 +97,18 @@ th svg {
   top: 27%;
   color: #aba7a7;
 }
+
+.spinner {
+  margin: 200px auto;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:#4d3ccf;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 70deg,#0000 71deg 90deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 20px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s5 1s infinite ;
+}
+@keyframes s5 {to{transform: rotate(.5turn)}}
