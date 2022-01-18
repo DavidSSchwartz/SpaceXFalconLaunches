@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import fetchData from './utils/api';
 import DataTable from './components/DataTable';
+import SearchBar from './components/SearchBar';
 
 const url = 'https://api.spacexdata.com/v4/launches';
 
@@ -20,6 +21,8 @@ function App() {
 
   return (
     <div className="App">
+      <SearchBar />
+
       {loading ?
         <p>
           loading
