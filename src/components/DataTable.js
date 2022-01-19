@@ -33,12 +33,12 @@ const DataTable = ({ data }) => {
 
     const sortIcon = (field) => {
         return (
-            (sortInfo?.field === field
+            sortInfo?.field === field
             &&
             {
                 'asc': <FontAwesomeIcon icon={faSortUp} />,
                 'desc': <FontAwesomeIcon icon={faSortDown} />
-            }[sortInfo?.direction] || <FontAwesomeIcon icon={faSort} />)
+            }[sortInfo?.direction] || <FontAwesomeIcon icon={faSort} />
         )
     }
 
