@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
-const SearchBar = ({ data }) => {
+const Search = ({ data }) => {
     
     const [ searchTerm, setSearchTerm ] = useState('');
 
@@ -15,10 +15,11 @@ const SearchBar = ({ data }) => {
             );
         }
     );
+
     const handleChange = (ev) => {
        setSearchTerm(ev.target.value);
     }
-
+            
     return (
         <div>
             <div className='search-bar-container'>
@@ -40,4 +41,4 @@ const SearchBar = ({ data }) => {
     )
 }
 
-export default SearchBar;
+export default Search;

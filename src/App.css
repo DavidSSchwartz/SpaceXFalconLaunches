@@ -37,7 +37,7 @@
   }
 }
 
-table, tr, th, td {
+tr, th, td {
   border: 1px solid black;
   padding: .5em;
 
@@ -46,6 +46,21 @@ table, tr, th, td {
 table {
   border-collapse: collapse;
   margin: 0 100px 100px;
+  box-shadow: 0 10px 20px #8e8a8a;
+}
+
+th {
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+}
+
+th svg {
+  margin-left: 10px;
+}
+
+.tableDetailsHeader {
+  cursor: default;
 }
 
 td {
@@ -56,14 +71,6 @@ td {
 td img {
   width: 100px;
   height: 100px;
-}
-
-th {
-  white-space: no-wrap;
-}
-
-th svg {
-  margin-left: 10px;
 }
 
 .tableDetails {
@@ -103,7 +110,7 @@ th svg {
   width:120px;
   height:120px;
   border-radius:50%;
-  background:#4d3ccf;
+  background:#3076c7;
   -webkit-mask:
     repeating-conic-gradient(#0000 0deg,#000 1deg 70deg,#0000 71deg 90deg),
     radial-gradient(farthest-side,#0000 calc(100% - 20px),#000 calc(100% - 8px));

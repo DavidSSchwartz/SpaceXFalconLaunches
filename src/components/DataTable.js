@@ -98,7 +98,7 @@ const DataTable = ({ data }) => {
                         Success
                         {sortIcon('success')}
                     </th>
-                    <th>
+                    <th className='tableDetailsHeader'>
                         Details
                     </th>
                 </tr>
