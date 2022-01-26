@@ -8,8 +8,8 @@ const url = 'https://api.spacexdata.com/v4/launches';
 
 function App() {
 
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [ data, setData ] = useState({});
+  const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
     fetchData(url)

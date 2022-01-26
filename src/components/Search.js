@@ -2,7 +2,7 @@ import { useState } from 'react';
 import DataTable from './DataTable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import logo from '../spacex-logo.png';
 
 const Search = ({ data }) => {
     
@@ -22,21 +22,26 @@ const Search = ({ data }) => {
             
     return (
         <div>
-            <div className='search-bar-container'>
-                <FontAwesomeIcon icon={faSearch} />
-                <input 
-                    type='text'
-                    placeholder='Search by name...'
-                    onChange = {handleChange}
-                />
-            </div>
-            {filteredData.length === 0 ?
-                <h2>No search results</h2>
-            :
-                <DataTable 
-                    data = {filteredData}
-                />
-            }
+            <header>
+                <img src={logo} className="" alt="logo" />
+                <div className='search-bar-container'>
+                    <FontAwesomeIcon icon={faSearch} />
+                    <input 
+                        type='text'
+                        placeholder='Search by name...'
+                        onChange = {handleChange}
+                    />
+                </div>
+            </header>
+            <main>
+                {filteredData.length === 0 ?
+                    <h2>No search results</h2>
+                :
+                    <DataTable 
+                        data = {filteredData}
+                    />
+                }
+            </main>
         </div>
     )
 }
