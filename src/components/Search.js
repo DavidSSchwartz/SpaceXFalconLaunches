@@ -3,6 +3,7 @@ import DataTable from './DataTable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import logo from '../spacex-logo.png';
+import logoMini from '../logo-mini.png';
 
 const Search = ({ data }) => {
     
@@ -23,7 +24,8 @@ const Search = ({ data }) => {
     return (
         <div>
             <header>
-                <img src={logo} className="" alt="logo" />
+                <img src={logo} className="main-logo" alt="logo" />
+                <img src={logoMini} className="mini-logo" alt="logo" />
                 <div className='search-bar-container'>
                     <FontAwesomeIcon icon={faSearch} />
                     <input 
